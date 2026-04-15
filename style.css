@@ -1,0 +1,59 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{background:#11111b;color:#cdd6f4;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;line-height:1.6;min-height:100vh}
+
+a{color:#89b4fa;text-decoration:none}
+a:hover{text-decoration:underline}
+
+header{border-bottom:1px solid #313244;padding:0 24px}
+.header-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;letter-spacing:-0.5px}
+nav{display:flex;align-items:center;gap:20px}
+nav a{color:#a6adc8;font-size:.9rem;display:flex;align-items:center;gap:6px}
+nav a:hover{color:#cdd6f4}
+
+main{max-width:900px;margin:0 auto;padding:48px 24px}
+
+.hero{text-align:center;margin-bottom:48px}
+.hero h1{font-size:2.4rem;font-weight:800;letter-spacing:-1px;margin-bottom:12px}
+.hero .grad{background:linear-gradient(135deg,#89b4fa,#cba6f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:#a6adc8;max-width:520px;margin:0 auto;font-size:1.05rem}
+
+.config-row{display:grid;grid-template-columns:1fr 1.4fr .6fr;gap:12px;margin-bottom:16px}
+@media(max-width:640px){.config-row{grid-template-columns:1fr}}
+
+.field label{display:flex;align-items:center;gap:6px;font-size:.8rem;color:#a6adc8;margin-bottom:6px;font-weight:500}
+.field input{width:100%;padding:10px 12px;background:#1e1e2e;border:1px solid #313244;border-radius:8px;color:#cdd6f4;font-size:.9rem;outline:none;transition:border .2s}
+.field input:focus{border-color:#89b4fa}
+
+.editor-wrap{border:1px solid #313244;border-radius:10px;overflow:hidden;margin-bottom:16px}
+.editor-bar{background:#181825;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:#a6adc8;border-bottom:1px solid #313244}
+.editor-bar span{display:flex;align-items:center;gap:6px}
+textarea{width:100%;min-height:320px;padding:14px;background:#1e1e2e;color:#cdd6f4;border:none;resize:vertical;font-family:'SF Mono',Monaco,'Cascadia Code','Fira Code',Consolas,monospace;font-size:.85rem;line-height:1.7;outline:none;tab-size:2}
+
+.actions{display:flex;gap:10px;margin-bottom:20px}
+button{display:flex;align-items:center;gap:8px;padding:11px 22px;border:none;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer;transition:all .15s}
+#buildBtn{background:#89b4fa;color:#11111b}
+#buildBtn:hover{background:#74c7ec}
+#buildBtn:disabled{opacity:.6;cursor:not-allowed}
+#clearBtn{background:#313244;color:#a6adc8}
+#clearBtn:hover{background:#45475a}
+
+.output-area{border:1px solid #313244;border-radius:10px;overflow:hidden;margin-bottom:40px}
+.output-bar{background:#181825;padding:10px 14px;display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;border-bottom:1px solid #313244}
+.log-area{background:#1e1e2e;padding:14px;font-family:'SF Mono',Monaco,Consolas,monospace;font-size:.78rem;color:#a6adc8;max-height:240px;overflow-y:auto;line-height:1.8}
+.log-area div{padding:1px 0}
+
+.how-section{margin-top:20px}
+.how-section h2{text-align:center;font-size:1.5rem;margin-bottom:32px;font-weight:700}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:640px){.steps{grid-template-columns:1fr}}
+.step{text-align:center;padding:24px 16px}
+.step-num{width:36px;height:36px;background:#313244;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-weight:700;font-size:.9rem;color:#89b4fa}
+.step h3{font-size:1rem;margin-bottom:8px}
+.step p{color:#a6adc8;font-size:.85rem;line-height:1.6}
+
+footer{border-top:1px solid #313244;padding:24px;text-align:center;color:#585b70;font-size:.82rem;margin-top:40px}
+
+.spin{animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
